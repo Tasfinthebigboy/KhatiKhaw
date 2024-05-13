@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Kenia&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #111222;
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.navbar .hover::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none; /* Hide by default on larger screens */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 30rem;
+}
+
+.hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .navbar {
+        display: none; /* Hide navbar by default on smaller screens */
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center align links */
+        position: fixed; /* Position navbar fixed */
+        top: 70px; /* Adjust distance from the top */
+        left: 0; /* Align to the left */
+        background-color: #333; /* Set background color */
+        width: 100%; /* Full width */
+        z-index: 99; /* Set higher z-index */
+        transition: 3s;
+    }
+
+    .navbar.show {
+        display: flex; /* Show navbar when active */
+    }
+
+    .navbar .navlink {
+        display: none; /* Hide the nav links by default */
+    }
+
+    .navbar a {
+        margin: 10px 0; /* Adjust margin for links */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu */
+    }
+
+    .content {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center; /* Center align text */
+    }
+
+    .content .image {
+        width: 100%; /* Make image full width */
+        height: auto; /* Set height to auto */
+    }
+
+    .content .text-box {
+        transform: none; /* Remove transformation */
+        margin-left: 300px;
+        margin-top: -70px;
+        margin-bottom: 40px;
+    }
+
+    .media-icons {
+        margin-top: 10px; /* Adjust margin */
+    }
+
+    .media-icons a {
+        margin: 0 10px; /* Adjust margin for icons */
+    }
+
+    .sec-02 .content {
+        flex-direction: column; /* Reverse content order */
+        margin-top: -70px;
+    }
+
+    .sec-02 .content h4 {
+        margin-top: 30px;
+    }
+
+    .sec-02 .content p {
+        text-align: left;
+        font-size: 18px;
+    }
+
+    .dcontainer .checkout-form {
+        max-width: 400px;
+        padding: 40px;
+        background-color: #333;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+    }
+}
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 100px;
+    color: #fff;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-title {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.content {
+    position: relative;
+    width: 1150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .image {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.content .image img {
+    z-index: 111;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.content .text-box {
+    z-index: 222;
+    background: rgba(255,255,255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    max-width: 380px;
+    border: 1px solid rgba(255,255,255, 0.1);
+    border-radius: 10px;
+    transform: translate(-150px, 120px);
+}
+
+.content .text-box h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.media-icons {
+    margin-top: 100px;
+}
+
+.media-icons a {
+    color: #fff;
+    font-size: 2em;
+    margin: 60px;
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 80px;
+}
+
+.info-title {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.info {
+    width: 700px;
+    margin-left: 50px;
+}
+
+/* Stylish Button */
+button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+
+}
+
+.btn {
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: black; /* Set background color */
+    outline: #333;
+    color: #fff; /* Set text color */
+    padding: 20px; /* Add padding */
+    margin-top: 30px;
+}
+
+.footer .container {
+    max-width: 1200px; /* Set maximum width */
+    margin: 0 auto; /* Center align */
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Space elements evenly */
+    align-items: center; /* Center align vertically */
+}
+
+.footer-content {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center align vertically */
+}
+
+.footer-logo {
+    margin-right: 20px; /* Add space between logo and links */
+}
+
+.footer-links {
+    display: flex; /* Use flexbox */
+}
+
+.footer-link {
+    margin-right: 20px; /* Add space between links */
+    color: #fff; /* Set link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.footer-info {
+    margin-top: 10px; /* Add space between links and info */
+    font-size: 14px; /* Adjust font size */
+}
+
+/* Product Section Styles */
+.product-section {
+    padding: 80px 0; /* Add padding */
+    background-color: #333; /* Set background color */
+}
+
+.product-details {
+    max-width: 600px; /* Set maximum width */
+}
+
+.product-details h2 {
+    font-size: 24px; /* Set font size */
+    margin-bottom: 20px; /* Add space at the bottom */
+}
+
+.product-details p {
+    margin-bottom: 10px; /* Add space at the bottom */
+}
+
+.product-image img {
+    max-width: 100%; /* Ensure image fits container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.product-image {
+    margin-top: 20px; /* Add space at the top */
+    overflow: hidden;
+    max-width: 100%; /* Ensure image fits container */
+    height: auto; /* Maintain aspect ratio */
+    width: 400px; /* Set width to desired size */
+    height: 400px; /* Set height to desired size */
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px; /* Add padding */
+    font-size: 16px; /* Set font size */
+    background-color: #4CAF50; /* Set background color */
+    color: #fff; /* Set text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Add cursor pointer */
+    transition: background-color 0.3s ease; /* Add transition */
+}
+
+button:hover {
+    background-color: #45a049; /* Change background color on hover */
+}
+
+button:focus {
+    outline: none; /* Remove focus outline */
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: #fff;
+}
+
+
+.dcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 12em;
+  }
+  
+  .checkout-form {
+    max-width: 600px;
+    padding: 40px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea,
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    height: 100px;
+  }
+
+  
+  .billing-info {
+    margin-top: 20px;
+    border: 2px solid #ccc; /* Add border style */
+    background-color: #23021d;
+  }
+  
+  .billing-info p {
+    margin-bottom: 10px;
+  }

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khati Khow | Product 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
+</head>
+<body>
+    <!-- NavBar Of the Website -->
+    <header class="header">
+        <a href="/" class="logo">Khati Khow</a>
+        <button class="hamburger" aria-label="Menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        <nav class="navbar">
+            <a href="/" class="hover">Home</a>
+            <a href="/products" class="">Products</a>
+            <a href="/about" class="">About</a>
+            <a href="/contact" class="navlink">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Product Section -->
+    <section class="product-section">
+        <div class="container">
+            <div class="product-image">
+                <img src="/products/product2.png" alt="Product 3">
+            </div>
+
+            <div class="product-details">
+                <h2>Premium Ghee</h2>
+                <p>Description: Exceptional quality, artisan-crafted, and luxurious. Elevates dishes with unparalleled richness, depth, and indulgence.</p>
+                <p><strong>Price:</strong> $13.67</p>
+                <a href="checkout/"><button>Buy</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="/" class="logo">Khati Khow</a>
+                </div>
+                <div class="footer-links">
+                    <a href="/" class="footer-link">Home</a>
+                    <a href="/products" class="footer-link">Products</a>
+                    <a href="/about" class="footer-link">About</a>
+                    <a href="/contact" class="footer-link">Contact</a>
+                </div>
+            </div>
+            <p class="footer-info">© 2024 Khati Khow. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal( { reset: false, distance: '60px', duration: 2500, delay: 400 } );
+        ScrollReveal().reveal('.image', { origin: 'top' });
+        ScrollReveal().reveal('.info, h3, h2', { origin: 'left' });
+        ScrollReveal().reveal('.content, .product-container img', { interval: 80, origin: 'right' });
+        ScrollReveal().reveal('header', { interval: 80, origin: 'left' });
+        ScrollReveal().reveal('.media-icons', { interval: 80, origin: 'bottom' });
+        ScrollReveal().reveal('.product-container h2, .footer', { interval: 80, origin: 'bottom' });
+        ScrollReveal().reveal('.product-section', { interval: 80, origin: 'bottom' });
+        ScrollReveal().reveal('.product-section h3', { interval: 80, origin: 'top' });
+        ScrollReveal().reveal('.product-section p', { interval: 80, origin: 'right' });
+        ScrollReveal().reveal('.product-section button', { interval: 80, origin: 'left', delay: 2000 });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const navbar = document.querySelector('.navbar');
+            const navLinks = document.querySelectorAll('.navbar .navlink');
+        
+            // Toggle navbar visibility when hamburger menu is clicked
+            hamburger.addEventListener('click', function () {
+                navbar.classList.toggle('show');
+            });
+        
+            // Close the navbar when a link is clicked
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    navbar.classList.remove('show');
+                });
+            });
+        });
+        </script>
+</body>
+</html>
